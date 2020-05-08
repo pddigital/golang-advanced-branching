@@ -38,7 +38,7 @@ type Values struct {
 
 type feedbackResult struct {
 	feedbackTotal int
-	feedbackPosition int
+	feedbackPositive int
 	feedbackNegative int
 	feedbackNeutral int
 }
