@@ -58,7 +58,7 @@ const (
 
 func init() {
 
-	var vehicleResult = make(map[string]feedbackResult)
+	var vehicleResult = map[string]feedbackResult
 	var inventory []vehicle
 
 	inventory = []vehicle{
