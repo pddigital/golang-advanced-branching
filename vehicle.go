@@ -4,8 +4,46 @@ import (
 
 )
 
+type vehicle interface {
 
-// Values array for the feedback.json file
+}
+
+type car struct {
+	make string
+	model string
+	typeVehicle string
+}
+
+type truck struct {
+	make string
+	model string
+	typeVehicle string
+}
+
+type bike struct {
+	make string
+	model string
+}
+
+// Values array for the feedback.json
+
+type Model struct {
+	Name string `json:"model"`
+	Feedback []string `json:"feedback"`
+}
+
+type Values struct {
+	Models []Model `json:"model"`
+}
+
+type feedbackResult struct {
+	feedbackTotal int
+	feedbackPosition int
+	feedbackNegative int
+	feedbackNeutral int
+}
+
+var vehicleResult = make(map[string]feedbackResult)
 
 // Model array for the feedback.json file
 
@@ -21,7 +59,7 @@ const (
 
 func init() {
 
-/*
+
 	inventory = []vehicle{
 		bike{"FTR 1200", "Indian"},
 		bike{"Iron 1200", "Harley"},
@@ -34,8 +72,8 @@ func init() {
 		car{"Camry", "Toyota", "Sedan"},
 		truck{"F-150", "Ford", "Truck"},
 		truck{"RAM1500", "Dodge", "Truck"}}
-*/
-//	vehicleResult = make(map[string]feedbackResult)
+
+	vehicleResult = make(map[string]feedbackResult)
 
 }
 
