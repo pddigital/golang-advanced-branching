@@ -43,8 +43,6 @@ type feedbackResult struct {
 	feedbackNeutral int
 }
 
-var vehicleResult = make(map[string]feedbackResult)
-var inventory []vehicle
 
 // Model array for the feedback.json file
 
@@ -60,6 +58,8 @@ const (
 
 func init() {
 
+	var vehicleResult = make(map[string]feedbackResult)
+	var inventory []vehicle
 
 	inventory = []vehicle{
 		bike{"FTR 1200", "Indian"},
