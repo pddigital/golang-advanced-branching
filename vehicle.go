@@ -43,6 +43,9 @@ type feedbackResult struct {
 	feedbackNeutral int
 }
 
+var vehicleResult = make(map[string]feedbackResult)
+var inventory []vehicle
+
 // Model array for the feedback.json file
 
 type rating float32
